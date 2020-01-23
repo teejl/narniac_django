@@ -21,7 +21,6 @@ def signup(request):
     # Redirect to home page
     return render(request, 'main.html') # Need to find a way to redirect the user vs rendering
 
-
 def update_user(email):
     import os
     import pandas as pd
@@ -38,7 +37,7 @@ def update_user(email):
         usrs.to_csv(usrpath, index=False)
         print("Adding user to the list...")
     else:
-        print("User is already on the list!")
+        print("User is already on the list!", "\n")
 
     # talk to the server
     print(" ~~~ Updated userlist ~~~ ", "\n", usrs, "\n")
